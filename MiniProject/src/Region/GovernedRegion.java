@@ -5,5 +5,6 @@ public interface GovernedRegion {
 	double population;
 	String governmentForm;
 	String language;
+	String planet;
 
 }
