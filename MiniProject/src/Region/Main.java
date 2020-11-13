@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+
 	public static void main (String[] args) {
 	
 		launch(args);
@@ -30,6 +31,11 @@ public class Main extends Application {
 			new Button("Antarctica"),
 			new Button("Australia/Oceania"),
 	};
+
+	Label[] labels = new Label[] {
+			new Label("US"),
+	};
+	
 		
 		TilePane tp = new TilePane();
 		tp.setOrientation(Orientation.HORIZONTAL);
@@ -42,9 +48,9 @@ public class Main extends Application {
 		primaryStage.setScene(s);
 		primaryStage.show();
 		
-		
 		bt[0].setOnAction(e ->{
 			TilePane tpna = new TilePane();
+			tpna.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene sna = new Scene(tpna);
 			primaryStage.setTitle("North America");
 			primaryStage.setScene(sna);
@@ -53,6 +59,7 @@ public class Main extends Application {
 		
 		bt[1].setOnAction(e ->{
 			TilePane tpsa = new TilePane();
+			tpsa.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene sna = new Scene(tpsa);
 			primaryStage.setTitle("South America");
 			primaryStage.setScene(sna);
@@ -61,6 +68,7 @@ public class Main extends Application {
 		
 		bt[2].setOnAction(e ->{
 			TilePane tpeu = new TilePane();
+			tpeu.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene eu = new Scene(tpeu);
 			primaryStage.setTitle("Europe");
 			primaryStage.setScene(eu);
@@ -69,6 +77,7 @@ public class Main extends Application {
 		
 		bt[3].setOnAction(e ->{
 			TilePane tpa = new TilePane();
+			tpa.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene a = new Scene(tpa);
 			primaryStage.setTitle("Africa");
 			primaryStage.setScene(a);
@@ -77,6 +86,7 @@ public class Main extends Application {
 		
 		bt[4].setOnAction(e ->{
 			TilePane tpA = new TilePane();
+			tpA.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene A = new Scene(tpA);
 			primaryStage.setTitle("Asia");
 			primaryStage.setScene(A);
@@ -85,6 +95,7 @@ public class Main extends Application {
 		
 		bt[5].setOnAction(e ->{
 			TilePane tpAa = new TilePane();
+			tpAa.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene Aa = new Scene(tpAa);
 			primaryStage.setTitle("Antartica");
 			primaryStage.setScene(Aa);
@@ -93,12 +104,12 @@ public class Main extends Application {
 		
 		bt[6].setOnAction(e ->{
 			TilePane tpAO = new TilePane();
+			tpAO.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
 			Scene AO = new Scene(tpAO);
 			primaryStage.setTitle("Australia/Oceania");
 			primaryStage.setScene(AO);
 			primaryStage.show();
 		});
-		
 	}
 	
 
