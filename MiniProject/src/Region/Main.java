@@ -2,11 +2,14 @@ package Region;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.TilePane;
 import javafx.stage.Stage;
 
@@ -50,7 +53,7 @@ public class Main extends Application {
 		
 		bt[0].setOnAction(e ->{
 			TilePane tpna = new TilePane();
-			tpna.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
+			tpna.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"), new TextField(), new TextArea());
 			Scene sna = new Scene(tpna);
 			primaryStage.setTitle("North America");
 			primaryStage.setScene(sna);
@@ -59,7 +62,7 @@ public class Main extends Application {
 		
 		bt[1].setOnAction(e ->{
 			TilePane tpsa = new TilePane();
-			tpsa.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
+			tpsa.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"),new TextField(), new TextArea() );
 			Scene sna = new Scene(tpsa);
 			primaryStage.setTitle("South America");
 			primaryStage.setScene(sna);
@@ -67,8 +70,10 @@ public class Main extends Application {
 		});
 		
 		bt[2].setOnAction(e ->{
+		
 			TilePane tpeu = new TilePane();
-			tpeu.getChildren().addAll(new Button("create"),new Button("update"), new Button("delete"));
+			//How to implement button function in .addAll?
+		//	tpeu.getChildren().addAll(new Button("create").setOnAction(arg0);,new Button("update"), new Button("delete"));
 			Scene eu = new Scene(tpeu);
 			primaryStage.setTitle("Europe");
 			primaryStage.setScene(eu);
@@ -112,5 +117,4 @@ public class Main extends Application {
 		});
 	}
 	
-
 }
